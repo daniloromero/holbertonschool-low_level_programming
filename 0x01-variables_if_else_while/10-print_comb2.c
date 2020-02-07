@@ -15,16 +15,14 @@ int main(void)
 		{
 			putchar(l);
 			putchar(k);
-		if (l != '9' && k != '9')
+		if (l != '9' || k != '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		else
-		{
-			putchar('\n');
+
 		}
-		}	
 	}
+	putchar('\n');
 	return (0);
 }
