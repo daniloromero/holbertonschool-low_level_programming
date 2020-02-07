@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
- * main - Entry point
- *
+ * main - Smile in the mirror
+ *Description: alphabet reversed order
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int l ;
+	char l ;
 
 	for ( l = 'z'; l >= 'a'; l--)
 		putchar(l);
