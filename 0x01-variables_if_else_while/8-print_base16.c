@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - Hexadecinal 
- *Description: Hexadecimal digits sample
+ * main - Hexadecinal
+ * Description: Hexadecimal digits sample
  * Return: 0
  */
 int main(void)
