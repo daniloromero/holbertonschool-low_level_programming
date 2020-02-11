@@ -6,11 +6,9 @@
  */
 int _abs(int ab)
 {
-if (ab >= 0)
+if (ab < 0)
 {
-_putchar(ab);
+ab = ab * -1;
 }
-else
-_putchar(ab * -1);
-return (0);
+return (ab);
 }
