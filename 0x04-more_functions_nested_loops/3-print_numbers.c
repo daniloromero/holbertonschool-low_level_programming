@@ -11,9 +11,8 @@ void print_numbers(void)
 	n = 48;
 	while (n < 58)
 	{
-		if (n != 50 && n != 52)
-				_putchar(n);
-				n++;
+		_putchar(n);
+		n++;
 	}
 	_putchar("\n");
 }
