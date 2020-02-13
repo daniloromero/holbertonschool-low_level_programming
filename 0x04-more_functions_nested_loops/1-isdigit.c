@@ -5,7 +5,7 @@
  * @c: chrater to be checked
  * Return: Always 0.
  */
-int _isdigit(int c)i
+int _isdigit(int c)
 {
 	if (c > 47 && c < 58)
 		return (1);
