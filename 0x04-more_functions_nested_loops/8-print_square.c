@@ -9,15 +9,19 @@ void print_square(int size)
 	int height = 0;
 	int width;
 
-	while (height < size)
+	if (size > 0)
 	{
-		width = 0;
-		while (width < size)
+		while (height < size)
 		{
-			_putchar('#');
-			width++;
+			width = 0;
+			while (width < size)
+			{
+				_putchar('#');
+				width++;
+			}
+			_putchar('\n');
+			height++;
 		}
-		_putchar('\n');
-		height++;
 	}
+	_putchar('\n');
 }
