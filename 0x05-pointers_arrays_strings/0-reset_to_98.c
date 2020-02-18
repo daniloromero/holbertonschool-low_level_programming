@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - reset to 98
+ * reset_to_98- reset to 98
  * @n:
  * Return: always 0.
  */
