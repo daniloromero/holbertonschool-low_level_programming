@@ -28,7 +28,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int byte = 0;
 
-	while (*s && _strchr(*s, accept))
+	while (*s && _strchr(accept, *s))
 	{
 		s++;
 		byte++;
