@@ -12,9 +12,8 @@ int _product(int z, int n)
 		return (-1);
 	if ((z * z) == n)
 		return (z);
-	else
-		z++;
-		return (_product(z, n));
+	z++;
+	return (_product(z, n));
 }
 
 
