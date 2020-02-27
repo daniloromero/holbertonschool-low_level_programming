@@ -8,7 +8,7 @@
  */
 int _product(int z, int n)
 {
-	if (z == n || z > n)
+	if (z > n)
 		return (-1);
 	if ((z * z) == n)
 		return (z);
