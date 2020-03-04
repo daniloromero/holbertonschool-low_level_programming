@@ -18,11 +18,11 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == '\0')
 		s2 = "";
-	while (size1 <= *s1)
+	while (*(s1 + size1) != '\0')
 	{
 		size1++;
 	}
-	while (size2 <= *s2)
+	while (s2[size2] != '\0')
 	{
 		size2++;
 	}
