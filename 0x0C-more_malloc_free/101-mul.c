@@ -8,9 +8,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int mul;
-	int num1 = atoi(argv[1]);
-	int num1 = atoi(argv[2]);
+	long int mul;
+	long int num1 = atoi(argv[1]);
+	long int num1 = atoi(argv[2]);
 
 	if (argc != 3)
 	{
