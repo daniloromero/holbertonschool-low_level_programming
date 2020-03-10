@@ -19,6 +19,7 @@ char *rot13(char *s)
 			if (s[index1] == txt[index2])
 			{
 				s[index1] = enc[index2];
+				break;
 			}
 		}
 	}
