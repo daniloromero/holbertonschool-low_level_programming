@@ -12,7 +12,7 @@ char *rot13(char *s)
 	char *txt = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char *enc = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (index1 = 0; s[index1] != '\n'; index1++)
+	for (index1 = 0; s[index1]; index1++)
 	{
 		for (index2 = 0; txt[index2]; index2++)
 		{
