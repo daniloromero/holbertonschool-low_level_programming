@@ -9,7 +9,7 @@
  */
 void print_dog(struct dog *d)
 {
-	if (
+	if (!d)
 		return;
 	if (d)
 	{
