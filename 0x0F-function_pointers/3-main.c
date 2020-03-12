@@ -21,15 +21,17 @@ int main(int argc, char *argv[])
 	s = argv[2];
 	num2 = atoi(argv[3]);
 	num1 = atoi(argv[1]);
-	rslt = get_op_func(s);
-	if (!rslt || argv[2][1])
+	if ((*argv[2] != '+' && *argv[2] != '-' &&
+		*argv[2] != '*' && *argv[2] != '/' &&
+		*argv[2] != '%') || argv[2][1])
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	rslt = get_op_func(s);
 	if ((*argv[2] == '/' && atoi(argv[3]) == 0) ||
 		(*argv[2] == '%' && atoi(argv[3]) == 0))
-			printf("Error\n"), exit(100);
+		printf("Error\n"), exit(100);
 	printf("%d\n", rslt(num1, num2));
 	return (0);
 }
