@@ -1,6 +1,13 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 #include <stdarg.h>
+
+/**
+ * struct op - Struct op
+ *
+ * @t: print fucntion selector key
+ * @fp: pointer to print function
+ */
 typedef struct data_type
 {
 char t;
