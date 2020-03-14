@@ -36,7 +36,11 @@ void print_float(va_list ls)
  */
 void print_string(va_list ls)
 {
-	printf("%s", va_arg(ls, char *));
+	char *str = va_arg(ls, char *);
+
+	if (str == NULL)
+		printf("(nil)");
+	printf("%s", str);
 }
 /**
  * print_all - prints anything
@@ -49,6 +53,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	int r = 0;
 	int f = 0;
+	char *cm = "";
 
 	d_t types[] = {
 		{'c', print_c},
@@ -64,12 +69,14 @@ void print_all(const char * const format, ...)
 		while (types[f].t)
 		{
 			if (types[f].t == format[r])
+			{
+				printf("%s", cm);
 				types[f].fp(ap);
+				cm = ", ";
+			}
 			f++;
 		}
 		f = 0;
-		if (format[r + 1])
-			printf(", ");
 		r++;
 	}
 	printf("\n");
