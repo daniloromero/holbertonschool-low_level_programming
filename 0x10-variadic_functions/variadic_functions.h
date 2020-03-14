@@ -3,8 +3,8 @@
 #include <stdarg.h>
 typedef struct data_type
 {
-	char t;
-	void (*fp)(va_list ap);
+char t;
+void (*fp)(va_list ap);
 } d_t;
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
