@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * struct op - Struct op
+ * struct data_type- Struct d_t
  *
  * @t: print fucntion selector key
  * @fp: pointer to print function
