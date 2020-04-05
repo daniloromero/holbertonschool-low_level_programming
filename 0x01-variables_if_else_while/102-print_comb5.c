@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include·<stdio.h>¶
 /**
- * main -  00..99 && 00  99
- * Description: prints all possible combinations of 2 two-digit numbers. 00..99
+ * main - 00..99 && 00 99
+ * Description: prints allpossible combinations of 2 digit numbers 00..99
  * Return: 0
  */
 int main(void)
@@ -13,18 +13,18 @@ int main(void)
 	{
 		putchar((l / 10) + '0');
 		putchar((l % 10) + '0');
-		putchar(' ');
+		putchar('·');
 		putchar((k / 10) + '0');
 		putchar((k % 10) + '0');
 		if (l < 98)
 		{
 			putchar(',');
-			putchar(' ');
+			putchar('·');
 		}
 		if (k == 99)
 		{
 			l++;
-			k = l;
+			k = 1;
 		}
 	}
 	putchar('\n');
