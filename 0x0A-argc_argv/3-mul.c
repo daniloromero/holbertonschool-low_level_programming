@@ -10,11 +10,13 @@
 int main(int argc, char *argv[])
 {
 	int rslt;
-	int a = atoi(argv[1]);
-	int b = atoi(argv[2]);
 
-	if (argc)
-		rslt = a * b;
-			printf("%i\n", rslt);
-			return (0);
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return(1);
+	}
+	rslt = atoi(argv[1]) * atoi(argv[2]);
+	printf("%d\n", rslt);
+	return (0);
 }
