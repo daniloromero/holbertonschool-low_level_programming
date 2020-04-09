@@ -11,7 +11,8 @@ char *cap_string(char *s)
 
 	for (index = 0; *(s + index) != '\0'; index++)
 	{
-		while (*(s + index) == ' ' || *(s + index) == '\n' || *(s + index) == '\t')
+		while (*(s + index) == ' ' || *(s + index) == '\n' ||
+				*(s + index) == '\t' || *(s + index) == '.')
 		{
 			index++;
 			if (*(s + index) >= 'a' && *(s + index) <= 'z')
