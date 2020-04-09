@@ -11,7 +11,7 @@ int _atoi(char *s)
 {
 	int i = 0, neg = 1, integer = 0;
 
-	while (s[i] != NULL)
+	while (s[i])
 	{
 		if (s[i] == '-')
 			neg = neg * -1;
