@@ -17,10 +17,12 @@ int _atoi(char *s)
 			neg = neg * -1;
 		i++;
 	}
+	i = 0;
 	while ((s[i] >= '0' || s[i] <= '9') && s[i] != 0)
 	{
 		if (integer >= 0)
 			integer = integer * 10 + (s[i] - '0');
+		i++;
 	}
 	return (integer * neg);
 }
