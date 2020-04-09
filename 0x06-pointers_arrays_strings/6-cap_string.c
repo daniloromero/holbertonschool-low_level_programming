@@ -14,9 +14,9 @@ char *cap_string(char *s)
 		while (*(s + i) == ' ' || *(s + i) == '\n' ||
 			*(s + i) == '\t' || *(s + i) == '.' || *(s + i) == '"')
 		{
-			index++;
-			if (*(s + index) >= 'a' && *(s + index) <= 'z')
-				*(s + index) = (*(s + index) - ' ');
+			i++;
+			if (*(s + i) >= 'a' && *(s + i) <= 'z')
+				*(s + i) = (*(s + i) - ' ');
 		}
 	}
 	return (s);
