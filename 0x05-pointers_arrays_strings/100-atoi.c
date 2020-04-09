@@ -20,11 +20,11 @@ int _atoi(char *s)
 	i = 0;
 	while (*s)
 	{
-		if (s[i] >= '0' || s[i] <= '9') && s[i] != 0)
+		if ((s[i] >= '0' || s[i] <= '9') && s[i] != 0)
 		{
 			integer = integer * 10 + (s[i] - '0');
-			if (!(s[i + 1] >= '0' && s[i +1] <= '9'))
-				break:
+			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
+				break;
 		}
 		i++;
 	}
