@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *_strchr  searches a string for any of a set of bytes.-
+ *_strchr - searches a string for any of a set of bytes.-
  *@s:string to scan for charachter
  *@c: fist occurrance of character to be returned
  *Return:s
