@@ -7,12 +7,12 @@
  */
 char *cap_string(char *s)
 {
-	int index;
+	int i;
 
-	for (index = 0; *(s + index) != '\0'; index++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		while (*(s + index) == ' ' || *(s + index) == '\n' ||
-				*(s + index) == '\t' || *(s + index) == '.')
+		while (*(s + i) == ' ' || *(s + i) == '\n' ||
+			*(s + i) == '\t' || *(s + i) == '.' || *(s + i) == '"')
 		{
 			index++;
 			if (*(s + index) >= 'a' && *(s + index) <= 'z')
