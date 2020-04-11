@@ -3,9 +3,8 @@
 
 /**
  * free_list -  adds a new node at the end of a list_t list
- * @head:double pointer to list
- * @str: pointer to string
- * Return: address of new element in a linked list_t list
+ * @head: pointer to head of list
+ * Return: void
  */
 
 void free_list(list_t *head)
