@@ -1,15 +1,20 @@
-section .text
-	global _start
-_start:
-	mov rdx,len
-	mov rcx,msg
-	mov rbx,1
-	mov rax,3
-	int 0x80
+	extern printf
 
-	mov eax,1
-	int 0x80
+	section .data
+msg: 	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .data
-msg db 'Hello, Holberton', 0xa
-len equ $ - msg
+	section .text
+	global main
+main:
+	push rbp
+
+	mov rdi, fmt
+	mov rsi, msg
+	mov rax, 0
+	call printf
+
+	pop rbp
+
+	mov rax, 0
+	ret

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_node_end -  adds a new node at the end of a list_t list
+ * free_list -  adds a new node at the end of a list_t list
  * @head:double pointer to list
  * @str: pointer to string
  * Return: address of new element in a linked list_t list
