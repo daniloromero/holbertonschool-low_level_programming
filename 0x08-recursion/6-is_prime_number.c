@@ -3,7 +3,7 @@
 /**
  * prime_num - evaluates if number n is prime
  * @n: int
- * @m: int 2 base case for prime number
+ * @two: int 2 base case for prime number
  * Return: 1 if the input integer is a prime number, otherwise return 0
  **/
 
