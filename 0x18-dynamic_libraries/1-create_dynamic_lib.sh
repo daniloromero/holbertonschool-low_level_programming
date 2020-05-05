@@ -1,2 +1,3 @@
 #/bin/bash
-gcc -fPIC -shared -o libholberton.so *.c
+gcc -fPIC -c *c
+gcc -shared -o |libholberton.so *.c
