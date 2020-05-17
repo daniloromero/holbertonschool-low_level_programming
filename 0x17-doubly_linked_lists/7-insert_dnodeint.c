@@ -44,6 +44,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		counter++;
 		aux = aux->next;
+		if (idx > counter)
+			return (NULL);
 	}
 	return (newnode);
 }
