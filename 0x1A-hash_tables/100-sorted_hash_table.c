@@ -22,8 +22,8 @@ shash_table_t *shash_table_create(unsigned long int size)
 	for (; i < size; i++)
 		h_t->array[i] = NULL;
 
-	h->shead = NULL;
-	h->stail = NULL;
+	h_t->shead = NULL;
+	h_t->stail = NULL;
 
 	return (h_t);
 }
@@ -130,4 +130,62 @@ void shash_table_print(const shash_table_t *ht)
 		}
 	}
 	printf("}");
+}
+
+/**
+ * shash_table_print_rev - Prints a hash table in reverse
+ * @ht: Hash table
+ * Return: None
+ */
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	unsigned long int i = 0;
+	shash_node_t *hnode;
+	char j = ' ';
+
+	if (!ht)
+		return;
+
+	printf("{");
+	for (i = 0; i <= ht->size; i++)
+	{
+		hnode = ht->array[i];
+		while (hnode != NULL)
+		{
+			if (j == ',')
+				printf(",");
+			printf("'%s': '%s'", hnode->key, hnode->value);
+			hnode = hnode->next;
+			j = ',';
+		}
+	}
+	printf("}");
+}
+
+/**
+ * shash_table_delete - deletes a hash table
+ * @ht: Hash table
+ * Return: None
+ */
+void shash_table_delete(shash_table_t *ht)
+{
+	unsigned long int i;
+	shash_node_t *hnode, *aux;
+
+	if (!ht)
+		return;
+	for (i = 0; i < ht->size; i++)
+	{
+		hnode = ht->array[i];
+		while (hnode)
+		{
+			aux = hnode->next;
+			free(hnode->key);
+			free(hnode->value);
+			free(hnode);
+			hnode = aux;
+		}
+	}
+	free(ht->array);
+	free(ht);
 }
