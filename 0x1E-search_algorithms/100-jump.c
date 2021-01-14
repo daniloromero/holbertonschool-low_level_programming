@@ -33,10 +33,10 @@ int jump_search(int *array, size_t size, int value)
 		printf("Value checked array[%ld] = [%d]\n", tmp, array[tmp]);
 		tmp_2 = tmp;
 		tmp += 1;
+		if (array[tmp_2] == value)
+			return (tmp_2);
 		if (tmp == step || tmp == size)
 			return (-1);
 	}
-	if (array[tmp_2] == value)
-		return (tmp_2);
 	return (-1);
 }
