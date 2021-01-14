@@ -1,14 +1,14 @@
 #include "search_algos.h"
 
 /**
- * binary_search - search for value in array
+ * binnary_search - search for value in array
  * @array: pointer to array of integers
  * @size: size of array
  * @value: number given to be searched in array
  * Return: index of value otherwise -1
  */
 
-int binary_search(int *array, size_t size, int value)
+int binnary_search(int *array, size_t size, int value)
 {
 	size_t i, L = 0;
 	size_t R = size - 1;
@@ -63,5 +63,5 @@ int exponential_search(int *array, size_t size, int value)
 		bound = size;
 	binary = &(array[init]);
 	printf("Value found between indexes [%ld] and [%ld]\n", init, bound);
-	return (binary_search(binary, size - (bound /2), value));
+	return (binnary_search(binary, size - (bound /2), value));
 }
