@@ -65,5 +65,5 @@ int exponential_search(int *array, size_t size, int value)
 	if (i_subarray == (size_t)-1)
 		return (-1);
 	else
-	       	return (init + i_subarray);
+		return (init + i_subarray);
 }
