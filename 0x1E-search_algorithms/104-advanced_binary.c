@@ -2,9 +2,10 @@
 
 
 /**
- * recursive_binary - search for value in array
+ * recursive_binary - search for value in subarray
  * @array: pointer to array of integers
- * @size: size of array
+ * @init: start index of  subarray
+ * @end: end index of subarray
  * @value: number given to be searched in array
  * Return: index of value otherwise -1
  */
@@ -16,7 +17,7 @@ int recursive_binary(int *array, size_t init, size_t end, int value)
 	size_t m;
 
 
-	if (init >= end)
+	if (init > end)
 		return (-1);
 	printf("Searching in array: ");
 	if (end >= init)
@@ -29,8 +30,8 @@ int recursive_binary(int *array, size_t init, size_t end, int value)
 		if (array[m - 1] != value && array[m] == value)
 			return (m);
 		if (array[m] >= value)
-			return(recursive_binary(array, L, m, value));
-		return(recursive_binary(array, m + 1, end, value));
+			return (recursive_binary(array, L, m, value));
+		return (recursive_binary(array, m + 1, end, value));
 	}
 	return (-1);
 }
@@ -48,5 +49,5 @@ int advanced_binary(int *array, size_t size, int value)
 	if (array == NULL || size < 1)
 		return (-1);
 
-	return (recursive_binary(array, 0, size -1, value));
+	return (recursive_binary(array, 0, size - 1, value));
 }
