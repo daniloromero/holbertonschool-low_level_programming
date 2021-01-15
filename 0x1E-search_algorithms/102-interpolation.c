@@ -23,8 +23,6 @@ int interpolation_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	printf("i am here");
-	printf("i am here");
 	if (pos > size)
 		printf("Value checked array[%ld] is out of range\n", pos);
 
