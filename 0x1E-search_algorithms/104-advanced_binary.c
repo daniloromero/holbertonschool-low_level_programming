@@ -17,7 +17,7 @@ int recursive_binary(int *array, size_t init, size_t end, int value)
 
 
 	if (init >= end)
-	       return (-1);
+		return (-1);
 	printf("Searching in array: ");
 	if (end >= init)
 	{
